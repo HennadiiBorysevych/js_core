@@ -4,11 +4,9 @@ function toBase() {
 	const number = +prompt('Enter a number, please!');
 	const base = +prompt('Enter a base, please!');
 
-	if (isNaN(number) || isNaN(base)) {
-		console.log(ERROR_MESSAGE);
-	} else {
-		console.log(+number.toString(base));
-	}
+	const condition = isNaN(number) || isNaN(base);
+
+	return condition ? console.log(ERROR_MESSAGE) : console.log(+number.toString(base));
 }
 
 toBase();
