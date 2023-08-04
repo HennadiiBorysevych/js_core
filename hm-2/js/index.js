@@ -67,13 +67,13 @@ function selectFromInterval(array, firstNumber, secondNumber) {
 // ---------------------------------------------------------------------------------------------
 
 const myIterable = {
-	from: 1,
+	from: NaN,
 	to: 4,
 	[Symbol.iterator]: function () {
 		const from = this.from;
 		const to = this.to;
 
-		if (typeof from !== 'number' || typeof to !== 'number' || from > to) {
+		if (isNaN(from) || isNaN(to) || from > to) {
 			throw new Error('Invalid "from" or "to" properties');
 		}
 
