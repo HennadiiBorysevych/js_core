@@ -7,7 +7,7 @@ function makeObjectDeepCopy(object) {
 
 	if (Array.isArray(object)) {
 		const deepArray = [];
-		object.forEach(element => {
+		object.forEach((element) => {
 			deepArray.push(makeObjectDeepCopy(element));
 		});
 		return deepArray;
@@ -46,7 +46,7 @@ function selectFromInterval(array, firstNumber, secondNumber) {
 		throw new Error('The interval should be number');
 	}
 
-	array.forEach(el => {
+	array.forEach((el) => {
 		if (isNaN(el)) {
 			throw new Error('The array should only contain numbers.');
 		}
