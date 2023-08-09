@@ -3,13 +3,14 @@ function makeObjectDeepCopy(object) {
 		return object;
 	}
 
-	let deepCopy = {};
+	const deepCopy = {};
 
 	if (Array.isArray(object)) {
 		const deepArray = [];
 		object.forEach((element) => {
 			deepArray.push(makeObjectDeepCopy(element));
 		});
+
 		return deepArray;
 	}
 
@@ -20,6 +21,7 @@ function makeObjectDeepCopy(object) {
 			deepCopy[key] = makeObjectDeepCopy(object[key]);
 		}
 	}
+
 	return deepCopy;
 }
 
