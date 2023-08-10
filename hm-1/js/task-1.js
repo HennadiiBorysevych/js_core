@@ -10,8 +10,3 @@ function toBase() {
 }
 
 toBase();
-
-function c(params) {
-	console.log(arguments);
-}
-c();
