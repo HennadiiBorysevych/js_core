@@ -1,6 +1,7 @@
 const isString = (string) => {
 	return typeof string === 'string';
 };
+
 function concatStrings(string, separator) {
 	let together = string;
 	const separate = isString(separator) ? separator : '';
