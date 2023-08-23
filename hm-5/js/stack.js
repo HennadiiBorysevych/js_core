@@ -3,11 +3,11 @@ const isValidNumber = (number) => {
 };
 
 class Stack {
-	constructor(elements = 10) {
-		if (!isValidNumber(elements) || elements < 0) {
+	constructor(maxElementsSize = 10) {
+		if (!isValidNumber(maxElementsSize) || maxElementsSize < 0) {
 			throw new Error('Invalid value');
 		} else {
-			this.elements = elements;
+			this.maxElementsSize = maxElementsSize;
 		}
 
 		this.length = 0;
@@ -15,7 +15,7 @@ class Stack {
 	}
 
 	push(element) {
-		if (this.length === this.elements) {
+		if (this.length === this.maxElementsSize) {
 			throw new Error('Max size has exeeded');
 		}
 
